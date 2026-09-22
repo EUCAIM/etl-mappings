@@ -6069,6 +6069,7 @@
                     "/ImagingProcedure1_OffsetUnit": "Day",
                     "/ImagingProcedure1_ProcedureCode": "Axial scan mode",
                     "/Patient_DiagnosticCategory": "Patient with Cancer",
+                    "/Patient_ManagingOrganization": "5fe98f48-3ef3-536d-9ca8-06c901f8fdfa",
                     "/PrimaryCancerCondition_AgeUnitConcept": "Year",
                     "/Procedure1_OffsetUnit": "Day",
                     "/Procedure1_ProcedureCode": "Fine needle biopsy",
@@ -6132,6 +6133,13 @@
                         "dynamic": true,
                         "identifiesControllerService": false,
                         "name": "/Patient_DiagnosticCategory",
+                        "sensitive": false
+                    },
+                    "/Patient_ManagingOrganization": {
+                        "displayName": "/Patient_ManagingOrganization",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Patient_ManagingOrganization",
                         "sensitive": false
                     },
                     "/PrimaryCancerCondition_AgeUnitConcept": {
@@ -7638,7 +7646,7 @@
                     "mapping Procedure1_ProcedureCode": "SELECT \t'SAS_lungCancer' AS datasetId,\n\t\t'Fine needle biopsy' AS propertyNameOriginal,\n\t\t'None' AS originalValue,\n\t\t'Procedure1_ProcedureCode' AS propertyNameEUCAIM,\n        \"Procedure1_ProcedureCode\" AS codeInEUCAIM,\n\t\tCAST(CURRENT_TIMESTAMP AS VARCHAR) AS mappingTimestamp\nFROM FLOWFILE",
                     "mapping Radiotherapy1_OffsetUnit": "SELECT \t'SAS_lungCancer' AS datasetId,\n\t\t'day' AS propertyNameOriginal,\n\t\t'None' AS originalValue,\n\t\t'Radiotherapy1_OffsetUnit' AS propertyNameEUCAIM,\n        \"Radiotherapy1_OffsetUnit\" AS codeInEUCAIM,\n\t\tCAST(CURRENT_TIMESTAMP AS VARCHAR) AS mappingTimestamp\nFROM FLOWFILE",
                     "mapping Radiotherapy1_RadiotherapyCode": "SELECT \t'SAS_lungCancer' AS datasetId,\n\t\t'Radiotherapy - type' AS propertyNameOriginal,\n\t\t\"Radiotherapy - type\" AS originalValue,\n\t\t'Radiotherapy1_RadiotherapyCode' AS propertyNameEUCAIM,\n        \"Radiotherapy1_RadiotherapyCode\" AS codeInEUCAIM,\n\t\tCAST(CURRENT_TIMESTAMP AS VARCHAR) AS mappingTimestamp\nFROM FLOWFILE",
-                    "Patient": "SELECT \t\"Patient_Identifier\" AS Identifier,\n\t\t'Patient with Cancer' AS\tDiagnosticCategoryOriginal,\n\t\t\"Sex\" AS BirthSexOriginal,\n        \"Patient_BirthSex\" AS BirthSexEucaim,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t'0' as Processed\nFROM FLOWFILE",
+                    "Patient": "SELECT \t\"Patient_Identifier\" AS Identifier,\n\t\t'Patient with Cancer' AS\tDiagnosticCategoryOriginal,\n\t\t\"Sex\" AS BirthSexOriginal,\n        \"Patient_BirthSex\" AS BirthSexEucaim,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_ManagingOrganization\" AS ManagingOrganization,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "Primary Cancer Condition": "SELECT \t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS Identifier,\n\t\tCAST(REPLACE(\"PrimaryCancerCondition_AgeAtDiagnosis\", ',', '.') AS DOUBLE) AS AgeOfDiagnosis,\n\t\t'Year' AS AgeUnitOriginal,\n\t\t\"PrimaryCancerCondition_AgeUnitConcept\" AS AgeUnitEUCAIM,\n\t\t\"Cancer type\" AS BodySiteOriginal,\n\t\t\"PrimaryCancerCondition_BodySiteCode\" AS BodySiteEUCAIM,\n\t\t\"PrimaryCancerCondition_ConfirmedByProcedure\" AS ConfirmedByProcedure,\n\t\t\"Episode1_Number\" AS EpisodeNumber,\n\t\t\"Tumor histology/morphology\" AS HistologyMorphologyBehaviourOriginal,\n\t\t\"PrimaryCancerCondition_HistologyMorphologyBehaviourCode\" AS HistologyMorphologyBehaviourEUCAIM,\n\t\t0 as processed\nFROM FLOWFILE",
                     "Procedure1": "SELECT \t\"Patient_Identifier\" AS Identifier,\n\t\t\"Procedure1_ProcedureIdentifier\" AS\tProcedureIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"Procedure1_OffsetFromDiagnosis\" AS OffsetFromDiagnosis,\n\t\t'Day' AS OffsetUnitOriginal,\n        \"Procedure1_OffsetUnit\" AS OffsetUnitEUCAIM,\n\t\t'Fine needle biopsy' AS ProcedureOriginal,\n\t\t\"Procedure1_ProcedureCode\" AS ProcedureEUCAIM,\n\t\t0 as processed\nFROM FLOWFILE",
                     "RadiotherapyProcedure1": "SELECT \t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Radiotherapy1_ProcedureIdentifier\" AS TreatmentIdentifier,\n\t\t\"Radiotherapy1_OffsetFromDiagnosis\" AS OffsetFromDiagnosis,\n\t\t'Day' AS OffsetUnitOriginal,\n        \"Radiotherapy1_OffsetUnit\" AS OffsetUnitEUCAIM,\n\t\t\"Radiotherapy - type\" AS RadiotherapyOriginal,\n\t\t\"Radiotherapy1_RadiotherapyCode\" AS RadiotherapyEUCAIM,\n\t\t0 as processed\nFROM FLOWFILE",

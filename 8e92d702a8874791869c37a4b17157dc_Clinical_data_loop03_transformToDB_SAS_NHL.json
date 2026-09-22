@@ -4395,6 +4395,7 @@
           "y": 24.0
         },
         "properties": {
+          "/Patient_ManagingOrganization": "5fe98f48-3ef3-536d-9ca8-06c901f8fdfa",
           "Record Reader": "a5736488-9ea3-5faf-b8d4-8b384ec540ca",
           "Record Writer": "9223eb7f-0a75-5c4a-8d75-f4782e00e6e4",
           "Replacement Value Strategy": "literal-value",
@@ -4425,6 +4426,13 @@
           "/ImagingProcedure3_OffsetUnit": "\"day\""
         },
         "propertyDescriptors": {
+          "/Patient_ManagingOrganization": {
+            "displayName": "/Patient_ManagingOrganization",
+            "dynamic": true,
+            "identifiesControllerService": false,
+            "name": "/Patient_ManagingOrganization",
+            "sensitive": false
+          },
           "Record Reader": {
             "displayName": "Record Reader",
             "dynamic": false,
@@ -5351,7 +5359,6 @@
           "Replacement Value Strategy": "record-path-value",
           "/Patient_Identifier": "/\"Patient ID\"",
           "/Patient_DiagnosticCategory": "/\"Population\"",
-          "/Patient_ManagingOrganization": "/\"Site\"",
           "/Patient_BirthSex": "/\"Patient sex\"",
           "/Patient_Deceased": "/\"Patient death\"",
           "/PrimaryCancerCondition_AgeAtDiagnosis": "/\"Age at diagnosis\"",
@@ -5419,13 +5426,6 @@
             "dynamic": true,
             "identifiesControllerService": false,
             "name": "/Patient_DiagnosticCategory",
-            "sensitive": false
-          },
-          "/Patient_ManagingOrganization": {
-            "displayName": "/Patient_ManagingOrganization",
-            "dynamic": true,
-            "identifiesControllerService": false,
-            "name": "/Patient_ManagingOrganization",
             "sensitive": false
           },
           "/Patient_BirthSex": {
