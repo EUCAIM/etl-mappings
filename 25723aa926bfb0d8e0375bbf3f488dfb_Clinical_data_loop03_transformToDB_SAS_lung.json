@@ -6069,7 +6069,7 @@
                     "/ImagingProcedure1_OffsetUnit": "Day",
                     "/ImagingProcedure1_ProcedureCode": "Axial scan mode",
                     "/Patient_DiagnosticCategory": "Patient with Cancer",
-                    "/Patient_ManagingOrganization": "5fe98f48-3ef3-536d-9ca8-06c901f8fdfa",
+                    "/Patient_ManagingOrganization": "cb24c5802ba329168a953ec133e9470bcfbeeda8e2049336ca4000dfa99e85e4",
                     "/PrimaryCancerCondition_AgeUnitConcept": "Year",
                     "/Procedure1_OffsetUnit": "Day",
                     "/Procedure1_ProcedureCode": "Fine needle biopsy",
