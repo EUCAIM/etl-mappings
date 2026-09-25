@@ -9297,7 +9297,7 @@
                     "/Procedure3_ImagingTimepoint": "2",
                     "/Procedure3_OffsetUnit": "\"day\"",
                     "/SurgicalProcedure_OffsetUnit": "\"day\"",
-                    "/Tumor_SizeDimensionUnit": "\"cm\"",
+                    "/Tumor_SizeDimensionUnit": "\"centimeter\"",
                     "/TumorMarkerTest1_Category": "\"Laboratory\"",
                     "/TumorMarkerTest1_Code": "\"HER2\"",
                     "/TumorMarkerTest2_Category": "\"Laboratory\"",
