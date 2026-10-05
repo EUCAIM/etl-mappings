@@ -8303,18 +8303,10 @@
                     "y": 24.0
                 },
                 "properties": {
-                    " /Episode0_Number": "0",
-                    " /Episode1_Type": "Diagnosis",
-                    " /Episode2_Type ": "Treatment",
-                    " /Episode3_Type ": "Treatment",
-                    " /Episode4_Type ": "Relapse",
-                    " /Episode5_Type ": "Treatment",
-                    " /Episode6_Type ": "Treatment",
                     "/CancerRelatedProcedure1_EpisodeNumber": "1",
                     "/Dataset_Description": "Collection of patients with glioblastoma multiforme confirmed by biopsy and MR",
                     "/Dataset_Identifier": "40dbe9fb-c607-445d-a582-dea531b676b1",
                     "/Dataset_Title": "PerProGlio Cohort",
-                    "/Episode0_Type": "Overarching",
                     "/Episode1_Number": "1",
                     "/Episode2_Number": "2",
                     "/Episode3_Number": "3",
@@ -8344,58 +8336,15 @@
                     "/TumorMarker1_TumorMarkerCode": "Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
-                    "Replacement Value Strategy": "literal-value"
+                    "Replacement Value Strategy": "literal-value",
+                    "/Episode1_Type": "Diagnosis",
+                    "/Episode2_Type": "Treatment",
+                    "/Episode3_Type": "Treatment",
+                    "/Episode4_Type": "Relapse",
+                    "/Episode5_Type": "Treatment",
+                    "/Episode6_Type": "Treatment"
                 },
                 "propertyDescriptors": {
-                    " /Episode0_Number": {
-                        "displayName": " /Episode0_Number",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode0_Number",
-                        "sensitive": false
-                    },
-                    " /Episode1_Type": {
-                        "displayName": " /Episode1_Type",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode1_Type",
-                        "sensitive": false
-                    },
-                    " /Episode2_Type ": {
-                        "displayName": " /Episode2_Type ",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode2_Type ",
-                        "sensitive": false
-                    },
-                    " /Episode3_Type ": {
-                        "displayName": " /Episode3_Type ",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode3_Type ",
-                        "sensitive": false
-                    },
-                    " /Episode4_Type ": {
-                        "displayName": " /Episode4_Type ",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode4_Type ",
-                        "sensitive": false
-                    },
-                    " /Episode5_Type ": {
-                        "displayName": " /Episode5_Type ",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode5_Type ",
-                        "sensitive": false
-                    },
-                    " /Episode6_Type ": {
-                        "displayName": " /Episode6_Type ",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /Episode6_Type ",
-                        "sensitive": false
-                    },
                     "/CancerRelatedProcedure1_EpisodeNumber": {
                         "displayName": "/CancerRelatedProcedure1_EpisodeNumber",
                         "dynamic": true,
@@ -8422,13 +8371,6 @@
                         "dynamic": true,
                         "identifiesControllerService": false,
                         "name": "/Dataset_Title",
-                        "sensitive": false
-                    },
-                    "/Episode0_Type": {
-                        "displayName": "/Episode0_Type",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": "/Episode0_Type",
                         "sensitive": false
                     },
                     "/Episode1_Number": {
@@ -8639,6 +8581,48 @@
                         "dynamic": false,
                         "identifiesControllerService": false,
                         "name": "Replacement Value Strategy",
+                        "sensitive": false
+                    },
+                    "/Episode1_Type": {
+                        "displayName": "/Episode1_Type",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Episode1_Type",
+                        "sensitive": false
+                    },
+                    "/Episode2_Type": {
+                        "displayName": "/Episode2_Type",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Episode2_Type",
+                        "sensitive": false
+                    },
+                    "/Episode3_Type": {
+                        "displayName": "/Episode3_Type",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Episode3_Type",
+                        "sensitive": false
+                    },
+                    "/Episode4_Type": {
+                        "displayName": "/Episode4_Type",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Episode4_Type",
+                        "sensitive": false
+                    },
+                    "/Episode5_Type": {
+                        "displayName": "/Episode5_Type",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Episode5_Type",
+                        "sensitive": false
+                    },
+                    "/Episode6_Type": {
+                        "displayName": "/Episode6_Type",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/Episode6_Type",
                         "sensitive": false
                     }
                 },
@@ -9396,7 +9380,6 @@
                     "dbf-default-precision": "10",
                     "dbf-default-scale": "0",
                     "entity:Dataset": "SELECT \t\"Dataset_Identifier\" AS Identifier,\n\t\t\"Dataset_Title\" AS\tTitle,\n\t\t\"Dataset_Description\" AS Description,\n\t\t'0' as Processed\nFROM FLOWFILE",
-                    "entity:Episode0": "SELECT \t\"Episode0_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode0_Type\" AS TypeOriginal,\n\t\t'GEN1000009' AS TypeEucaim,\n\t\t\"Episode0_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Episode1": "SELECT \t\"Episode1_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode1_Type\" AS TypeOriginal,\n\t\t'GEN1000008' AS TypeEucaim,\n\t\t\"Episode1_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Episode2": "SELECT \t\"Episode2_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode2_Type\" AS TypeOriginal,\n\t\t'GEN1000007' AS TypeEucaim,\n\t\t\"Episode2_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Episode3": "SELECT \t\"Episode3_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode3_Type\" AS TypeOriginal,\n\t\t'GEN1000007' AS TypeEucaim,\n\t\t\"Episode3_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
@@ -9410,14 +9393,14 @@
                     "entity:ImagingProcedure2": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure2_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 2 as ImagingTimepoint,\n\t\t\"ImagingProcedure2_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t2 as Episode,\n\t\t\"ImagingProcedure2_PerformedDate\" AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:ImagingProcedure3": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure3_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 3 as ImagingTimepoint,\n\t\t\"ImagingProcedure3_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t4 as Episode,\n\t\t\"ImagingProcedure3_PerformedDate\" AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:ImagingProcedure4": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure4_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 4 as ImagingTimepoint,\n\t\t\"ImagingProcedure4_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t5 as Episode,\n\t\t\"ImagingProcedure4_PerformedDate\" AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
-                    "entity:ImagingProcedure5": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure5_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 5 as ImagingTimepoint,\n\t\t\"ImagingProcedure4_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t3 as Episode,\n\t\t\"ImagingProcedure4_PerformedDate\" AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
-                    "entity:ImagingProcedure6": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure6_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 6 as ImagingTimepoint,\n\t\t\"ImagingProcedure4_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t6 as Episode,\n\t\t\"ImagingProcedure4_PerformedDate\" AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
+                    "entity:ImagingProcedure5": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure5_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 5 as ImagingTimepoint,\n\t\t\"ImagingProcedure4_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t3 as Episode,\n\t\tCAST(NULL AS VARCHAR) AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
+                    "entity:ImagingProcedure6": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure6_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 6 as ImagingTimepoint,\n\t\t\"ImagingProcedure4_Code\" AS ImagingProcedureEUCAIM,\n\t\t'Magnetic resonance imaging' AS ImagingProcedureOriginal,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t6 as Episode,\n\t\tCAST(NULL AS VARCHAR) AS PerformedDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:MedicationAdministration1": "SELECT \t\"MedicationAdministration1_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\tCASE\n        \tWHEN \"MedicationAdministration1_StartDate\" NOT IN ('?', '', 'NA', 'null', 'No', 'Yes', 'partial')\n        \tTHEN \"MedicationAdministration1_StartDate\"\n        \tELSE NULL\n    \tEND AS DateOfMedication,\n\t\t\"MedicationAdministration1_Code\" AS MedicationCodeEUCAIM,\n\t\t\"Type of chemotherapy\" AS MedicationCodeOriginal,\n\t\t3 AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:MedicationAdministration2": "SELECT \t\"MedicationAdministration2_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"MedicationAdministration2_StartDate\" AS DateOfMedication,\n\t\t\"MedicationAdministration2_Code\" AS MedicationCodeEUCAIM,\n\t\t\"R-Type of chemotherapy\" AS MedicationCodeOriginal,\n\t\t6 AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Patient": "SELECT \t\"Patient_Identifier\" AS Identifier,\n\t\t\"Patient_DatasetIdentifier\" AS DatasetIdentifier,\n\t\t\"Patient_ManagingOrganization\" AS ManagingOrganization,\n\t\t\"Population\" AS\tDiagnosticCategoryOriginal,\n\t\t\"Patient_Population\" AS DiagnosticCategoryEucaim,\n\t\t\"Gender\" AS BirthSexOriginal,\n        \"Patient_BirthSex\" AS BirthSexEucaim,\n\t\t\"Patient_DateOfLastContact\" AS LastContactDate,\n\t\tCASE\n        \tWHEN \"Patient_Deceased\" IN ('Yes')\n        \tTHEN '1'\n        \tELSE '0'\n    \tEND AS Deceased,\n\t\tCASE\n        \tWHEN \"Patient_CauseOfDeath\" IN ('Yes')\n        \tTHEN 'CLIN1007990'\n        \tELSE NULL\n    \tEND AS CauseOfDeathEUCAIM,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:PrimaryCancerCondition": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"PrimaryCancerCondition_AssertedDate\" AS AssertedDate,\n\t\tCAST(REPLACE(\"PrimaryCancerCondition_AgeAtDiagnosis\", ',', '.') AS DOUBLE) AS AgeOfDiagnosis,\n\t\t\"Age Unit\" AS AgeUnitOriginal,\n\t\t\"PrimaryCancerCondition_AgeUnitConcept\" AS AgeUnitEUCAIM,\n\t\t\"Histological Type\" AS PrimaryCancerConditionOriginal,\n\t\t\"PrimaryCancerCondition_Code\" AS PrimaryCancerConditionEUCAIM,\n\t\t\"PrimaryCancerCondition_confirmedBy\" AS ConfirmedByProcedure,\n        \"D-Pathologycal subtype\" AS HistologyMorphologyBehaviourOriginal,\n\t\t\"PrimaryCancerCondition_HistologyMorphologyCode\" AS HistologyMorphologyBehaviourEUCAIM,\n\t\t\"Episode1_Number\" AS EpisodeNumber,\n\t\t'COM1000017' AS PrimaryCancerConditionType,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Procedure1": "SELECT \t\"SurgicalProcedure2_Identifier\" AS ProcedureIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"SurgicalProcedure2_Code\" AS ProcedureEUCAIM,\n\t\t'Biopsy' AS ProcedureOriginal,\n\t\t'CLIN1058186' AS ProcedureCategoryCodeEUCAIM,\n\t\t'Biopsy' AS ProcedureCategoryCodeOriginal,\n\t\t\"SurgicalProcedure2_PerformedDate\" AS PerformedDate,\n\t\t4 AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
-                    "entity:Procedure2": "SELECT \t\"CancerRelatedProcedure1_Identifier\" AS ProcedureIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"CancerRelatedProcedure1_ProcedureCode\" AS ProcedureEUCAIM,\n\t\t'Biopsy' AS ProcedureOriginal,\n\t\t'CLIN1058186' AS ProcedureCategoryCodeEUCAIM,\n\t\t'Biopsy' AS ProcedureCategoryCodeOriginal,\n\t\t\"CancerRelatedProcedure1_PerformedDate\" AS PerformedDate,\n\t\t0 AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
+                    "entity:Procedure2": "SELECT \t\"CancerRelatedProcedure1_Identifier\" AS ProcedureIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"CancerRelatedProcedure1_ProcedureCode\" AS ProcedureEUCAIM,\n\t\t'Biopsy' AS ProcedureOriginal,\n\t\t'CLIN1058186' AS ProcedureCategoryCodeEUCAIM,\n\t\t'Biopsy' AS ProcedureCategoryCodeOriginal,\n\t\t\"CancerRelatedProcedure1_PerformedDate\" AS PerformedDate,\n\t\tCAST(NULL AS INTEGER) AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Radiotherapy": "SELECT \t\"RadioTherapy1_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t3 AS Episode,\n\t\t\"Radiotherapy_DoseUnit\" AS DoseUnit,\n\t\t\"Radiotherapy_TotalDoseDelivered\" AS TotalDoseDelivered,\n\t\t\"Radiotherapy_StartDate\" AS PerformedDate,\n\t\t\"Radiotherapy_StartDate\" AS EpisodeStartDate,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:SurgicalProcedure1": "SELECT \t\"SurgicalProcedure1_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"SurgicalProcedure1_Code\" AS ProcedureEUCAIM,\n\t\t'Surgical procedure' AS ProcedureOriginal,\n\t\t\"SurgicalProcedure1_PerformedDate\" AS PerformedDate,\n\t\t2 AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:SurgicalProcedure3": "SELECT \t\"SurgicalProcedure3_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"SurgicalProcedure3_Code\" AS ProcedureEUCAIM,\n\t\t'Surgical procedure' AS ProcedureOriginal,\n\t\t\"SurgicalProcedure3_PerformedDate\" AS PerformedDate,\n\t\t5 AS Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
@@ -9502,13 +9485,6 @@
                         "dynamic": true,
                         "identifiesControllerService": false,
                         "name": "entity:Dataset",
-                        "sensitive": false
-                    },
-                    "entity:Episode0": {
-                        "displayName": "entity:Episode0",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": "entity:Episode0",
                         "sensitive": false
                     },
                     "entity:Episode1": {
@@ -10138,12 +10114,9 @@
                     "y": 248.0
                 },
                 "properties": {
-                    " /SurgicalProcedure3_Identifier": "concat(concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_surgicalProcedure3_'), 'tumor_1')",
                     "/CancerRelatedProcedure1_PerformedDate": "/\"D-Date Biopsy\"",
                     "/CancerRelatedProcedure1_ProcedureCode": "/\"Pathology Confirmation\"",
-                    "/Episode0_Identifier": "concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_episode0')",
                     "/Episode1_Identifier": "concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_episode1')",
-                    "/Episode1_Type": "concat('overarching','')",
                     "/Episode2_Identifier": "concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_episode2')",
                     "/Episode3_Identifier": "concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_episode3')",
                     "/Episode4_Identifier": "concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_episode4')",
@@ -10220,16 +10193,10 @@
                     "/TumorMarker9_ValueAsConcept": "/\"R-IDH1\"",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
-                    "Replacement Value Strategy": "record-path-value"
+                    "Replacement Value Strategy": "record-path-value",
+                    "/SurgicalProcedure3_Identifier": "concat(concat(concat(/\"Dataset_Identifier\", /\"PatientID\"), '_surgicalProcedure3_'), 'tumor_1')"
                 },
                 "propertyDescriptors": {
-                    " /SurgicalProcedure3_Identifier": {
-                        "displayName": " /SurgicalProcedure3_Identifier",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": " /SurgicalProcedure3_Identifier",
-                        "sensitive": false
-                    },
                     "/CancerRelatedProcedure1_PerformedDate": {
                         "displayName": "/CancerRelatedProcedure1_PerformedDate",
                         "dynamic": true,
@@ -10244,25 +10211,11 @@
                         "name": "/CancerRelatedProcedure1_ProcedureCode",
                         "sensitive": false
                     },
-                    "/Episode0_Identifier": {
-                        "displayName": "/Episode0_Identifier",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": "/Episode0_Identifier",
-                        "sensitive": false
-                    },
                     "/Episode1_Identifier": {
                         "displayName": "/Episode1_Identifier",
                         "dynamic": true,
                         "identifiesControllerService": false,
                         "name": "/Episode1_Identifier",
-                        "sensitive": false
-                    },
-                    "/Episode1_Type": {
-                        "displayName": "/Episode1_Type",
-                        "dynamic": true,
-                        "identifiesControllerService": false,
-                        "name": "/Episode1_Type",
                         "sensitive": false
                     },
                     "/Episode2_Identifier": {
@@ -10802,6 +10755,13 @@
                         "dynamic": false,
                         "identifiesControllerService": false,
                         "name": "Replacement Value Strategy",
+                        "sensitive": false
+                    },
+                    "/SurgicalProcedure3_Identifier": {
+                        "displayName": "/SurgicalProcedure3_Identifier",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/SurgicalProcedure3_Identifier",
                         "sensitive": false
                     }
                 },
