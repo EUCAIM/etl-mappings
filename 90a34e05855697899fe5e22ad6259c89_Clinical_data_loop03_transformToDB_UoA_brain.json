@@ -411,9 +411,9 @@
                 "destination": {
                     "comments": "",
                     "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
-                    "id": "63fd6d45-0197-1000-1548-54496f528752",
-                    "instanceIdentifier": "4c4c0a65-140b-358c-5f9d-fc02e1f09a85",
-                    "name": "RenameProperties",
+                    "id": "82ae3e8f-5b71-440a-982b-ec41ef243036",
+                    "instanceIdentifier": "594e1462-5452-42ba-b6ea-364cd378f821",
+                    "name": "AssignImagingTimepoints",
                     "type": "PROCESSOR"
                 },
                 "flowFileExpiration": "0 sec",
@@ -1348,6 +1348,78 @@
                     "id": "7b86475a-019c-1000-f11d-1102341ca415",
                     "instanceIdentifier": "01a86ec4-abbf-3235-1f90-57cb35040ba6",
                     "name": "UpdateAttribute",
+                    "type": "PROCESSOR"
+                },
+                "zIndex": 0
+            },
+            {
+                "backPressureDataSizeThreshold": "1 GB",
+                "backPressureObjectThreshold": 10000,
+                "bends": [],
+                "componentType": "CONNECTION",
+                "destination": {
+                    "comments": "",
+                    "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                    "id": "63fd6d45-0197-1000-1548-54496f528752",
+                    "instanceIdentifier": "4c4c0a65-140b-358c-5f9d-fc02e1f09a85",
+                    "name": "RenameProperties",
+                    "type": "PROCESSOR"
+                },
+                "flowFileExpiration": "0 sec",
+                "groupIdentifier": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                "identifier": "77a805b6-48cb-45ca-bea5-c9a06a3ff162",
+                "instanceIdentifier": "6472c688-da4e-4d3d-bce8-cb4bb2ec0d95",
+                "labelIndex": 0,
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "name": "",
+                "partitioningAttribute": "",
+                "prioritizers": [],
+                "selectedRelationships": [
+                    "timepoints"
+                ],
+                "source": {
+                    "comments": "",
+                    "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                    "id": "82ae3e8f-5b71-440a-982b-ec41ef243036",
+                    "instanceIdentifier": "594e1462-5452-42ba-b6ea-364cd378f821",
+                    "name": "AssignImagingTimepoints",
+                    "type": "PROCESSOR"
+                },
+                "zIndex": 0
+            },
+            {
+                "backPressureDataSizeThreshold": "1 GB",
+                "backPressureObjectThreshold": 10000,
+                "bends": [],
+                "componentType": "CONNECTION",
+                "destination": {
+                    "comments": "",
+                    "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                    "id": "7b86475a-019c-1000-f11d-1102341ca415",
+                    "instanceIdentifier": "01a86ec4-abbf-3235-1f90-57cb35040ba6",
+                    "name": "UpdateAttribute",
+                    "type": "PROCESSOR"
+                },
+                "flowFileExpiration": "0 sec",
+                "groupIdentifier": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                "identifier": "ab4c9369-9d94-4c38-8cae-76a156bc32c8",
+                "instanceIdentifier": "99503854-2fd2-4fac-9655-40ba67436cfd",
+                "labelIndex": 0,
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "name": "",
+                "partitioningAttribute": "",
+                "prioritizers": [],
+                "selectedRelationships": [
+                    "failure"
+                ],
+                "source": {
+                    "comments": "",
+                    "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                    "id": "82ae3e8f-5b71-440a-982b-ec41ef243036",
+                    "instanceIdentifier": "594e1462-5452-42ba-b6ea-364cd378f821",
+                    "name": "AssignImagingTimepoints",
                     "type": "PROCESSOR"
                 },
                 "zIndex": 0
@@ -8566,7 +8638,7 @@
                     "entity:Episode2": "SELECT \t\"Episode2_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode2_Type\" AS TypeOriginal,\n\t\t\"Episode2_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Episode3": "SELECT \t\"Episode3_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode3_Type\" AS TypeOriginal,\n\t\t\"Episode3_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Episode4": "SELECT \t\"Episode4_Identifier\" AS Identifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Episode4_Type\" AS TypeOriginal,\n\t\t\"Episode4_Number\" AS EpisodeNumber,\n\t\t'0' as Processed\nFROM FLOWFILE",
-                    "entity:ImagingProcedure1": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure1_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t 1 as ImagingTimepoint,\n\t\t\"ImagingProcedure1_ProcedureCode\" AS ImagingProcedureEUCAIM,\n\t\t\"Imaging procedure (MRI. CT, MRI+CT)\" AS ImagingProcedureOriginal,\n\t\tCAST (CAST (TIMESTAMPADD(\n        MILLISECOND,\n        CAST(\"ImagingProcedure1_PerformedDate\" AS BIGINT),\n        TIMESTAMP '1970-01-01 00:00:00'\n    ) AS DATE) AS VARCHAR) AS PerformedDate,\n\t\t1 as Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
+                    "entity:ImagingProcedure1": "SELECT \t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"ImagingProcedure1_ProcedureIdentifier\" As ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t CAST(\"ImagingProcedure1_Timepoint\" AS INTEGER) AS ImagingTimepoint,\n\t\t\"ImagingProcedure1_ProcedureCode\" AS ImagingProcedureEUCAIM,\n\t\t\"Imaging procedure (MRI. CT, MRI+CT)\" AS ImagingProcedureOriginal,\n\t\tCAST (CAST (TIMESTAMPADD(\n        MILLISECOND,\n        CAST(\"ImagingProcedure1_PerformedDate\" AS BIGINT),\n        TIMESTAMP '1970-01-01 00:00:00'\n    ) AS DATE) AS VARCHAR) AS PerformedDate,\n\t\t1 as Episode,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:MedicationAdministration1": "SELECT \t\"MedicationAdministration2_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t3 AS Episode,\n\t\t'0' as processed\nFROM FLOWFILE\nWHERE \"Procedure2_IsChemotherapy\" IS NOT NULL",
                     "entity:MedicationAdministration2": "SELECT \t\"MedicationAdministration2_Identifier\" AS TreatmentIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t4 AS Episode,\n\t\t'0' as processed\nFROM FLOWFILE",
                     "entity:Patient": "SELECT \t\"Patient_Identifier\" AS Identifier,\n\t\t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Population\" AS\tDiagnosticCategoryOriginal,\n\t\t\"Patient_DiagnosticCategory\" AS DiagnosticCategoryEucaim,\n\t\t\"Gender / Sex\" AS BirthSexOriginal,\n        \"Patient_BirthSex\" AS BirthSexEucaim,\n\t\t'0' as Processed\nFROM FLOWFILE",
@@ -8846,7 +8918,7 @@
                     "/Episode4_Identifier": "concat(concat(/\"Dataset_Identifier\", /\"patient_id\"), '_episode4')",
                     "/HistologicGrade_Value": "/\"Grading (WHO 2021)\"",
                     "/ImagingProcedure1_ProcedureCode": "/\"Imaging procedure (MRI. CT, MRI+CT)\"",
-                    "/ImagingProcedure1_ProcedureIdentifier": "concat(concat(concat(/\"Dataset_Identifier\", /\"patient_id\"), '_cancerCondition_1'), 'imaging_1')",
+                    "/ImagingProcedure1_ProcedureIdentifier": "concat(concat(concat(concat(/\"Dataset_Identifier\", /\"patient_id\"), '_cancerCondition_1'), 'imaging_'), /ImagingProcedure1_Timepoint)",
                     "/MedicationAdministration1_Identifier": "concat(concat(concat(/\"Dataset_Identifier\", /\"patient_id\"), '_Medication1_'), 'tumor_1')",
                     "/MedicationAdministration2_Identifier": "concat(concat(concat(/\"Dataset_Identifier\", /\"patient_id\"), '_Medication2_'), 'tumor_1')",
                     "/Patient_BirthSex": "/\"Gender / Sex\"",
@@ -9868,6 +9940,95 @@
                     "background-color": "#268c3b"
                 },
                 "type": "org.apache.nifi.processors.standard.LookupRecord",
+                "yieldDuration": "1 sec"
+            },
+            {
+                "autoTerminatedRelationships": [
+                    "original"
+                ],
+                "backoffMechanism": "PENALIZE_FLOWFILE",
+                "bulletinLevel": "WARN",
+                "bundle": {
+                    "artifact": "nifi-standard-nar",
+                    "group": "org.apache.nifi",
+                    "version": "2.3.0"
+                },
+                "comments": "Each row of the clinical file is one imaging exam of a patient. Numbers them by exam date so every one gets its own ImagingProcedure with its timepoint.",
+                "componentType": "PROCESSOR",
+                "concurrentlySchedulableTaskCount": 1,
+                "executionNode": "ALL",
+                "groupIdentifier": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                "identifier": "82ae3e8f-5b71-440a-982b-ec41ef243036",
+                "instanceIdentifier": "594e1462-5452-42ba-b6ea-364cd378f821",
+                "maxBackoffPeriod": "10 mins",
+                "name": "AssignImagingTimepoints",
+                "penaltyDuration": "30 sec",
+                "position": {
+                    "x": -1968.0,
+                    "y": 144.0
+                },
+                "properties": {
+                    "dbf-default-precision": "10",
+                    "dbf-default-scale": "0",
+                    "include-zero-record-flowfiles": "true",
+                    "record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
+                    "record-writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
+                    "timepoints": "SELECT *,\n       ROW_NUMBER() OVER (\n           PARTITION BY \"patient_id\"\n           ORDER BY \"ImagingProcedure1_PerformedDate\",\n                    CASE \"Imaging category\"\n                        WHEN 'Pre-Treatment' THEN 0\n                        WHEN 'Post-Treatment' THEN 1\n                        ELSE 2\n                    END\n       ) AS ImagingProcedure1_Timepoint\nFROM FLOWFILE"
+                },
+                "propertyDescriptors": {
+                    "dbf-default-precision": {
+                        "displayName": "Default Decimal Precision",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "dbf-default-precision",
+                        "sensitive": false
+                    },
+                    "dbf-default-scale": {
+                        "displayName": "Default Decimal Scale",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "dbf-default-scale",
+                        "sensitive": false
+                    },
+                    "include-zero-record-flowfiles": {
+                        "displayName": "Include Zero Record FlowFiles",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "include-zero-record-flowfiles",
+                        "sensitive": false
+                    },
+                    "record-reader": {
+                        "displayName": "Record Reader",
+                        "dynamic": false,
+                        "identifiesControllerService": true,
+                        "name": "record-reader",
+                        "sensitive": false
+                    },
+                    "record-writer": {
+                        "displayName": "Record Writer",
+                        "dynamic": false,
+                        "identifiesControllerService": true,
+                        "name": "record-writer",
+                        "sensitive": false
+                    },
+                    "timepoints": {
+                        "displayName": "timepoints",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "timepoints",
+                        "sensitive": false
+                    }
+                },
+                "retriedRelationships": [],
+                "retryCount": 10,
+                "runDurationMillis": 0,
+                "scheduledState": "ENABLED",
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "style": {
+                    "background-color": "#9ea53b"
+                },
+                "type": "org.apache.nifi.processors.standard.QueryRecord",
                 "yieldDuration": "1 sec"
             }
         ],
