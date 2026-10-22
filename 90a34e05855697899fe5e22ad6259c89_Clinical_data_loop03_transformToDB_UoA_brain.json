@@ -1432,9 +1432,9 @@
                 "destination": {
                     "comments": "",
                     "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
-                    "id": "8fed3d15-019c-1000-0aa6-c50fe7a0da98",
-                    "instanceIdentifier": "8470de3d-0f16-3e92-4028-a0a25ddcdef1",
-                    "name": "LookupRecordForPCCHistologyMorphology",
+                    "id": "4b1be984-1eb3-4e2a-b959-fdce81704892",
+                    "instanceIdentifier": "41eff76e-05f9-470a-85ef-f98e4a1d11ec",
+                    "name": "LookupRecordForPrimaryCancerConditionCode",
                     "type": "PROCESSOR"
                 },
                 "flowFileExpiration": "0 sec",
@@ -1456,6 +1456,42 @@
                     "id": "ed563518-1efc-4826-ab47-aeef6dc21c1a",
                     "instanceIdentifier": "c2c20926-1507-4cc8-a628-a029278c4cee",
                     "name": "LookupRecordForTumorLaterality",
+                    "type": "PROCESSOR"
+                },
+                "zIndex": 0
+            },
+            {
+                "backPressureDataSizeThreshold": "1 GB",
+                "backPressureObjectThreshold": 10000,
+                "bends": [],
+                "componentType": "CONNECTION",
+                "destination": {
+                    "comments": "",
+                    "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                    "id": "8fed3d15-019c-1000-0aa6-c50fe7a0da98",
+                    "instanceIdentifier": "8470de3d-0f16-3e92-4028-a0a25ddcdef1",
+                    "name": "LookupRecordForPCCHistologyMorphology",
+                    "type": "PROCESSOR"
+                },
+                "flowFileExpiration": "0 sec",
+                "groupIdentifier": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                "identifier": "8a154c54-7814-48c1-b801-b95b71c95b1d",
+                "instanceIdentifier": "c98f5f8f-b477-432d-98d5-de9b3620dbef",
+                "labelIndex": 0,
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "name": "",
+                "partitioningAttribute": "",
+                "prioritizers": [],
+                "selectedRelationships": [
+                    "success"
+                ],
+                "source": {
+                    "comments": "",
+                    "groupId": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                    "id": "4b1be984-1eb3-4e2a-b959-fdce81704892",
+                    "instanceIdentifier": "41eff76e-05f9-470a-85ef-f98e4a1d11ec",
+                    "name": "LookupRecordForPrimaryCancerConditionCode",
                     "type": "PROCESSOR"
                 },
                 "zIndex": 0
@@ -3629,6 +3665,100 @@
                 },
                 "scheduledState": "DISABLED",
                 "type": "org.apache.nifi.csv.CSVReader"
+            },
+            {
+                "bulletinLevel": "WARN",
+                "bundle": {
+                    "artifact": "nifi-lookup-services-nar",
+                    "group": "org.apache.nifi",
+                    "version": "2.3.0"
+                },
+                "comments": "",
+                "componentType": "CONTROLLER_SERVICE",
+                "controllerServiceApis": [
+                    {
+                        "bundle": {
+                            "artifact": "nifi-standard-services-api-nar",
+                            "group": "org.apache.nifi",
+                            "version": "2.3.0"
+                        },
+                        "type": "org.apache.nifi.lookup.StringLookupService"
+                    },
+                    {
+                        "bundle": {
+                            "artifact": "nifi-standard-services-api-nar",
+                            "group": "org.apache.nifi",
+                            "version": "2.3.0"
+                        },
+                        "type": "org.apache.nifi.lookup.LookupService"
+                    }
+                ],
+                "groupIdentifier": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                "identifier": "984801e1-e96d-4190-b1d0-14139f3a9688",
+                "instanceIdentifier": "75c2eb8f-3be2-4fed-9516-38825bd2562b",
+                "name": "LookupPrimaryCancerConditionCodeService",
+                "properties": {
+                    "Cache Expiration": null,
+                    "dbrecord-lookup-cache-size": "0",
+                    "dbrecord-lookup-clear-cache-on-enabled": "true",
+                    "dbrecord-lookup-dbcp-service": "896a4a36-7cc4-3592-b1a9-8a5d5589d4a3",
+                    "dbrecord-lookup-key-column": "originalValue",
+                    "dbrecord-lookup-table-name": "eucaim_etl_aux.LookupPrimaryCancerConditionCode",
+                    "lookup-value-column": "parsedValue"
+                },
+                "propertyDescriptors": {
+                    "Cache Expiration": {
+                        "displayName": "Cache Expiration",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "Cache Expiration",
+                        "sensitive": false
+                    },
+                    "dbrecord-lookup-cache-size": {
+                        "displayName": "Cache Size",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "dbrecord-lookup-cache-size",
+                        "sensitive": false
+                    },
+                    "dbrecord-lookup-clear-cache-on-enabled": {
+                        "displayName": "Clear Cache on Enabled",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "dbrecord-lookup-clear-cache-on-enabled",
+                        "sensitive": false
+                    },
+                    "dbrecord-lookup-dbcp-service": {
+                        "displayName": "Database Connection Pooling Service",
+                        "dynamic": false,
+                        "identifiesControllerService": true,
+                        "name": "dbrecord-lookup-dbcp-service",
+                        "sensitive": false
+                    },
+                    "dbrecord-lookup-key-column": {
+                        "displayName": "Lookup Key Column",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "dbrecord-lookup-key-column",
+                        "sensitive": false
+                    },
+                    "dbrecord-lookup-table-name": {
+                        "displayName": "Table Name",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "dbrecord-lookup-table-name",
+                        "sensitive": false
+                    },
+                    "lookup-value-column": {
+                        "displayName": "Lookup Value Column",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "lookup-value-column",
+                        "sensitive": false
+                    }
+                },
+                "scheduledState": "DISABLED",
+                "type": "org.apache.nifi.lookup.db.SimpleDatabaseLookupService"
             }
         ],
         "defaultBackPressureDataSizeThreshold": "1 GB",
@@ -8980,7 +9110,8 @@
                     "/Tumor_SizeOtherDimension": "/\"Solid Tumor Dimensions (cm) Size.OtherDimension\"",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
-                    "Replacement Value Strategy": "record-path-value"
+                    "Replacement Value Strategy": "record-path-value",
+                    "/PrimaryCancerCondition_Code_parsed": "/\"Pathology / Histological Type\""
                 },
                 "propertyDescriptors": {
                     "/Episode1_Identifier": {
@@ -9212,6 +9343,13 @@
                         "dynamic": false,
                         "identifiesControllerService": false,
                         "name": "Replacement Value Strategy",
+                        "sensitive": false
+                    },
+                    "/PrimaryCancerCondition_Code_parsed": {
+                        "displayName": "/PrimaryCancerCondition_Code_parsed",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/PrimaryCancerCondition_Code_parsed",
                         "sensitive": false
                     }
                 },
@@ -9515,7 +9653,7 @@
                 "properties": {
                     "Custom Module Directory": null,
                     "Custom Transformation Class Name": null,
-                    "Jolt Specification": "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n\t  \"*\": \"&\",\n      \"Patient_BirthSex\": \"lookup_batch.Patient_BirthSex\",\n\t  \"Patient_DiagnosticCategory_parsed\": \"lookup_batch.Patient_DiagnosticCategory\",\n\t  \"PrimaryCancerCondition_AgeUnitConcept\": \"lookup_batch.PrimaryCancerCondition_AgeUnitConcept\",\n\t  \"PrimaryCancerCondition_Code\": \"lookup_batch.PrimaryCancerCondition_Code\",\n\t  \"PrimaryCancerCondition_Topography\": \"lookup_batch.PrimaryCancerCondition_Topography\",\n      \"PrimaryCancerCondition_HistologyMorphologyBehaviourCode_parsed\": \"lookup_batch.PrimaryCancerCondition_HistologyMorphologyBehaviourCode\",\n\t  \"Tumor_BodySiteLateralityQualifier_parsed\": \"lookup_batch.Tumor_BodySiteLateralityQualifier\",\n\t  \"Tumor_BodySiteLocationQualifier_parsed\": \"lookup_batch.Tumor_BodySiteLocationQualifier\",\n\t  \"Tumor_SizeDimensionUnit\": \"lookup_batch.Tumor_SizeDimensionUnit\",\n\t  \"ImagingProcedure1_ProcedureCode_parsed\": \"lookup_batch.ImagingProcedure1_ProcedureCode\",\n\t  \"ImagingProcedure1_Category\": \"lookup_batch.ImagingProcedure1_Category\",\n\t  \"SurgicalProcedure1_Code\": \"lookup_batch.SurgicalProcedure1_Code\"\n\t  \n    }\n  }\n]",
+                    "Jolt Specification": "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n\t  \"*\": \"&\",\n      \"Patient_BirthSex\": \"lookup_batch.Patient_BirthSex\",\n\t  \"Patient_DiagnosticCategory_parsed\": \"lookup_batch.Patient_DiagnosticCategory\",\n\t  \"PrimaryCancerCondition_AgeUnitConcept\": \"lookup_batch.PrimaryCancerCondition_AgeUnitConcept\",\n\t  \"PrimaryCancerCondition_Code_parsed\": \"lookup_batch.PrimaryCancerCondition_Code\",\n\t  \"PrimaryCancerCondition_Topography\": \"lookup_batch.PrimaryCancerCondition_Topography\",\n      \"PrimaryCancerCondition_HistologyMorphologyBehaviourCode_parsed\": \"lookup_batch.PrimaryCancerCondition_HistologyMorphologyBehaviourCode\",\n\t  \"Tumor_BodySiteLateralityQualifier_parsed\": \"lookup_batch.Tumor_BodySiteLateralityQualifier\",\n\t  \"Tumor_BodySiteLocationQualifier_parsed\": \"lookup_batch.Tumor_BodySiteLocationQualifier\",\n\t  \"Tumor_SizeDimensionUnit\": \"lookup_batch.Tumor_SizeDimensionUnit\",\n\t  \"ImagingProcedure1_ProcedureCode_parsed\": \"lookup_batch.ImagingProcedure1_ProcedureCode\",\n\t  \"ImagingProcedure1_Category\": \"lookup_batch.ImagingProcedure1_Category\",\n\t  \"SurgicalProcedure1_Code\": \"lookup_batch.SurgicalProcedure1_Code\"\n\t  \n    }\n  }\n]",
                     "Jolt Transform": "jolt-transform-chain",
                     "jolt-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "jolt-record-record-writer": "9c609a6f-495b-3ea5-9381-a06b75643a88",
@@ -10101,6 +10239,127 @@
                     "record-writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
                     "result-contents": "insert-entire-record",
                     "result-record-path": "/Tumor_BodySiteLateralityQualifier_parsed",
+                    "Root Record Path": "/",
+                    "routing-strategy": "route-to-success"
+                },
+                "propertyDescriptors": {
+                    "key": {
+                        "displayName": "key",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "key",
+                        "sensitive": false
+                    },
+                    "lookup-service": {
+                        "displayName": "Lookup Service",
+                        "dynamic": false,
+                        "identifiesControllerService": true,
+                        "name": "lookup-service",
+                        "sensitive": false
+                    },
+                    "record-path-lookup-miss-result-cache-size": {
+                        "displayName": "Cache Size",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "record-path-lookup-miss-result-cache-size",
+                        "sensitive": false
+                    },
+                    "record-reader": {
+                        "displayName": "Record Reader",
+                        "dynamic": false,
+                        "identifiesControllerService": true,
+                        "name": "record-reader",
+                        "sensitive": false
+                    },
+                    "record-update-strategy": {
+                        "displayName": "Record Update Strategy",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "record-update-strategy",
+                        "sensitive": false
+                    },
+                    "record-writer": {
+                        "displayName": "Record Writer",
+                        "dynamic": false,
+                        "identifiesControllerService": true,
+                        "name": "record-writer",
+                        "sensitive": false
+                    },
+                    "result-contents": {
+                        "displayName": "Record Result Contents",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "result-contents",
+                        "sensitive": false
+                    },
+                    "result-record-path": {
+                        "displayName": "Result RecordPath",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "result-record-path",
+                        "sensitive": false
+                    },
+                    "Root Record Path": {
+                        "displayName": "Root Record Path",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "Root Record Path",
+                        "sensitive": false
+                    },
+                    "routing-strategy": {
+                        "displayName": "Routing Strategy",
+                        "dynamic": false,
+                        "identifiesControllerService": false,
+                        "name": "routing-strategy",
+                        "sensitive": false
+                    }
+                },
+                "retriedRelationships": [],
+                "retryCount": 10,
+                "runDurationMillis": 0,
+                "scheduledState": "ENABLED",
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "style": {
+                    "background-color": "#268c3b"
+                },
+                "type": "org.apache.nifi.processors.standard.LookupRecord",
+                "yieldDuration": "1 sec"
+            },
+            {
+                "autoTerminatedRelationships": [
+                    "failure"
+                ],
+                "backoffMechanism": "PENALIZE_FLOWFILE",
+                "bulletinLevel": "WARN",
+                "bundle": {
+                    "artifact": "nifi-standard-nar",
+                    "group": "org.apache.nifi",
+                    "version": "2.3.0"
+                },
+                "comments": "",
+                "componentType": "PROCESSOR",
+                "concurrentlySchedulableTaskCount": 1,
+                "executionNode": "ALL",
+                "groupIdentifier": "dfd036dd-b554-3c12-b4ba-6dce78cd88d7",
+                "identifier": "4b1be984-1eb3-4e2a-b959-fdce81704892",
+                "instanceIdentifier": "41eff76e-05f9-470a-85ef-f98e4a1d11ec",
+                "maxBackoffPeriod": "10 mins",
+                "name": "LookupRecordForPrimaryCancerConditionCode",
+                "penaltyDuration": "30 sec",
+                "position": {
+                    "x": -2592.0,
+                    "y": 752.0
+                },
+                "properties": {
+                    "key": "/PrimaryCancerCondition_Code",
+                    "lookup-service": "984801e1-e96d-4190-b1d0-14139f3a9688",
+                    "record-path-lookup-miss-result-cache-size": "0",
+                    "record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
+                    "record-update-strategy": "use-property",
+                    "record-writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
+                    "result-contents": "insert-entire-record",
+                    "result-record-path": "/PrimaryCancerCondition_Code_parsed",
                     "Root Record Path": "/",
                     "routing-strategy": "route-to-success"
                 },
