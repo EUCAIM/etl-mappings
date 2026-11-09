@@ -3528,8 +3528,8 @@
                     "dbcp-soft-min-evictable-idle-time": "-1",
                     "dbcp-time-between-eviction-runs": "-1",
                     "kerberos-user-service": null,
-                    "Max Total Connections": "8",
-                    "Max Wait Time": "500 millis",
+                    "Max Total Connections": "16",
+                    "Max Wait Time": "30 sec",
                     "Validation-query": null
                 },
                 "propertyDescriptors": {
@@ -5097,7 +5097,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -5204,7 +5207,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -5760,7 +5766,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "cancerstage",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -5961,7 +5967,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -6430,7 +6439,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -6658,7 +6670,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -6917,7 +6932,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -8209,7 +8227,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -9059,7 +9080,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "surgicalprocedure",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -9260,7 +9281,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -9834,7 +9858,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "cancerrelatedmedication",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -10035,7 +10059,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -10446,7 +10473,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "imagingprocedure",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -10647,7 +10674,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -11879,7 +11909,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "episode",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -12080,7 +12110,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -13805,7 +13838,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "primarycancercondition",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -14006,7 +14039,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -14064,7 +14100,7 @@
                     "put-db-record-quoted-table-identifiers": "false",
                     "put-db-record-record-reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "put-db-record-schema-name": "eucaim_cdm_ingestion",
-                    "put-db-record-statement-type": "UPSERT",
+                    "put-db-record-statement-type": "INSERT",
                     "put-db-record-table-name": "labtestresult",
                     "put-db-record-translate-field-names": "true",
                     "put-db-record-unmatched-column-behavior": "Ignore Unmatched Columns",
@@ -14265,7 +14301,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",

@@ -1551,8 +1551,8 @@
           "Database Connection URL": "jdbc:postgresql://nifi-postgres:5432/eucaim-etl-db",
           "Database Driver Class Name": "org.postgresql.Driver",
           "Database User": "postgres",
-          "Max Total Connections": "8",
-          "Max Wait Time": "500 millis",
+          "Max Total Connections": "16",
+          "Max Wait Time": "30 sec",
           "Validation-query": null,
           "database-driver-locations": "#{db_driver_filepath}",
           "dbcp-max-conn-lifetime": "-1",
@@ -2262,7 +2262,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -2521,7 +2524,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -2628,7 +2634,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -2887,7 +2896,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -3146,7 +3158,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -3803,7 +3818,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -4610,7 +4628,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -4942,7 +4963,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -5049,7 +5073,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -5637,7 +5664,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -6008,7 +6038,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -6381,7 +6414,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",
@@ -6640,7 +6676,10 @@
             "sensitive": false
           }
         },
-        "retriedRelationships": [],
+        "retriedRelationships": [
+            "failure",
+            "retry"
+        ],
         "retryCount": 10,
         "runDurationMillis": 0,
         "scheduledState": "ENABLED",

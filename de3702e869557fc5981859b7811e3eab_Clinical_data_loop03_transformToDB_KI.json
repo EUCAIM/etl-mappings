@@ -2617,8 +2617,8 @@
                     "dbcp-soft-min-evictable-idle-time": "-1",
                     "dbcp-time-between-eviction-runs": "-1",
                     "kerberos-user-service": null,
-                    "Max Total Connections": "8",
-                    "Max Wait Time": "500 millis",
+                    "Max Total Connections": "16",
+                    "Max Wait Time": "30 sec",
                     "Validation-query": null
                 },
                 "propertyDescriptors": {
@@ -3777,7 +3777,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -4173,7 +4176,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -4432,7 +4438,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -4809,7 +4818,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -6436,7 +6448,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -6543,7 +6558,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -6875,7 +6893,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -7496,7 +7517,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -7988,7 +8012,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
@@ -8382,7 +8409,10 @@
                         "sensitive": false
                     }
                 },
-                "retriedRelationships": [],
+                "retriedRelationships": [
+                    "failure",
+                    "retry"
+                ],
                 "retryCount": 10,
                 "runDurationMillis": 0,
                 "scheduledState": "ENABLED",
