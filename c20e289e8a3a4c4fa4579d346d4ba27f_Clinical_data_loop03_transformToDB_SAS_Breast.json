@@ -6200,12 +6200,20 @@
                     "y": 208.0
                 },
                 "properties": {
+                    "/MedicationAdministration_Code": "replaceRegex(replaceRegex(replaceRegex(/MedicationAdministration_Code, '^.nab.Paclitaxel$', 'Nab paclitaxel'), '^GCSF$', 'Granulocyte colony-stimulating factor'), '^Emtansine$', 'TDM1')",
                     "/Patient_BirthSex": "toUpperCase(/Patient_BirthSex)",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
                     "Replacement Value Strategy": "record-path-value"
                 },
                 "propertyDescriptors": {
+                    "/MedicationAdministration_Code": {
+                        "displayName": "/MedicationAdministration_Code",
+                        "dynamic": true,
+                        "identifiesControllerService": false,
+                        "name": "/MedicationAdministration_Code",
+                        "sensitive": false
+                    },
                     "/Patient_BirthSex": {
                         "displayName": "/Patient_BirthSex",
                         "dynamic": true,
@@ -7112,12 +7120,12 @@
                     "y": -56.0
                 },
                 "properties": {
-                    " /CancerStageM_Value": "/M",
-                    " /CancerStageN_Value ": "/N",
-                    " /Procedure3_Identifier ": "concat(/\"Patient ID\", '_procedure_3')",
+                    "/CancerStageM_Value": "/M",
+                    "/CancerStageN_Value": "/N",
+                    "/Procedure3_Identifier": "concat(/\"Patient ID\", '_procedure_3')",
                     "/CancerStage2_Value": "/\"ypT\"",
                     "/CancerStage3_Value": "/\"ypN\"",
-                    "/CancerStageT_Value ": "/T",
+                    "/CancerStageT_Value": "/T",
                     "/MedicationAdministration_Code": "/\"Systemic therapy drug\"",
                     "/MedicationAdministration_Identifier": "concat(/\"Patient ID\", '_medication_administration_3') ",
                     "/MedicationAdministration_OffsetFromDiagnosis": "/\"Systemic therapy start date\"",
@@ -7155,25 +7163,25 @@
                     "Replacement Value Strategy": "record-path-value"
                 },
                 "propertyDescriptors": {
-                    " /CancerStageM_Value": {
-                        "displayName": " /CancerStageM_Value",
+                    "/CancerStageM_Value": {
+                        "displayName": "/CancerStageM_Value",
                         "dynamic": true,
                         "identifiesControllerService": false,
-                        "name": " /CancerStageM_Value",
+                        "name": "/CancerStageM_Value",
                         "sensitive": false
                     },
-                    " /CancerStageN_Value ": {
-                        "displayName": " /CancerStageN_Value ",
+                    "/CancerStageN_Value": {
+                        "displayName": "/CancerStageN_Value",
                         "dynamic": true,
                         "identifiesControllerService": false,
-                        "name": " /CancerStageN_Value ",
+                        "name": "/CancerStageN_Value",
                         "sensitive": false
                     },
-                    " /Procedure3_Identifier ": {
-                        "displayName": " /Procedure3_Identifier ",
+                    "/Procedure3_Identifier": {
+                        "displayName": "/Procedure3_Identifier",
                         "dynamic": true,
                         "identifiesControllerService": false,
-                        "name": " /Procedure3_Identifier ",
+                        "name": "/Procedure3_Identifier",
                         "sensitive": false
                     },
                     "/CancerStage2_Value": {
@@ -7190,11 +7198,11 @@
                         "name": "/CancerStage3_Value",
                         "sensitive": false
                     },
-                    "/CancerStageT_Value ": {
-                        "displayName": "/CancerStageT_Value ",
+                    "/CancerStageT_Value": {
+                        "displayName": "/CancerStageT_Value",
                         "dynamic": true,
                         "identifiesControllerService": false,
-                        "name": "/CancerStageT_Value ",
+                        "name": "/CancerStageT_Value",
                         "sensitive": false
                     },
                     "/MedicationAdministration_Code": {
@@ -9306,7 +9314,7 @@
                     "/CancerStageT_Code": "\"AJCC/UICC 8th edition\"",
                     "/Dataset_Description": "This dataset comprises retrospectively collected longitudinal PET-CT imaging studies and clinical data of patients diagnosed with locally advanced breast cancer (with axillary lymph node involvement) who underwent primary systemic treatment. It includes diagnostic and treatment follow-up PET-CT scans, as well as comprehensive clinical information such as pathology reports, metabolic-biochemical markers, and treatment details. The dataset supports the development of AI methods to predict treatment response, contributing to personalized breast cancer care.",
                     "/Dataset_Identifier": "c20e289e8a3a4c4fa4579d346d4ba27f",
-                    "/Dataset_Title": "Breast cancer: PET-CT εmaging and clinical data for treatment optimization",
+                    "/Dataset_Title": "Breast cancer: PET-CT imaging and clinical data for treatment optimization",
                     "/MedicationAdministration_OffsetUnit": "\"day\"",
                     "/Patient_ManagingOrganization": "cb24c5802ba329168a953ec133e9470bcfbeeda8e2049336ca4000dfa99e85e4",
                     "/Procedure1_Category": "\"Biopsy\"",
@@ -9314,7 +9322,7 @@
                     "/Procedure1_OffsetUnit": "\"day\"",
                     "/Procedure2_Category": "\"Imaging (procedure)\"",
                     "/Procedure2_Code": "\"PET-CT\"",
-                    "/Procedure2_ImagingTimepoint ": "1",
+                    "/Procedure2_ImagingTimepoint": "1",
                     "/Procedure2_OffsetUnit": "\"day\"",
                     "/Procedure3_Category": "\"Imaging (procedure)\"",
                     "/Procedure3_Code": "\"PET-CT\"",
@@ -9325,11 +9333,11 @@
                     "/TumorMarkerTest1_Category": "\"Laboratory\"",
                     "/TumorMarkerTest1_Code": "\"HER2\"",
                     "/TumorMarkerTest2_Category": "\"Laboratory\"",
-                    "/TumorMarkerTest2_Code": "\"ER\"",
+                    "/TumorMarkerTest2_Code": "\"Presence of estrogen receptor in neoplasm\"",
                     "/TumorMarkerTest3_Category": "\"Laboratory\"",
-                    "/TumorMarkerTest3_Code": "\"PR\"",
+                    "/TumorMarkerTest3_Code": "\"Presence of progesterone receptor in neoplasm\"",
                     "/TumorMarkerTest4_Category": "\"Laboratory\"",
-                    "/TumorMarkerTest4_Code": "\"KI-67\"",
+                    "/TumorMarkerTest4_Code": "\"Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm of breast by immunohistochemistry\"",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
                     "Replacement Value Strategy": "literal-value"
@@ -9468,11 +9476,11 @@
                         "name": "/Procedure2_Code",
                         "sensitive": false
                     },
-                    "/Procedure2_ImagingTimepoint ": {
-                        "displayName": "/Procedure2_ImagingTimepoint ",
+                    "/Procedure2_ImagingTimepoint": {
+                        "displayName": "/Procedure2_ImagingTimepoint",
                         "dynamic": true,
                         "identifiesControllerService": false,
-                        "name": "/Procedure2_ImagingTimepoint ",
+                        "name": "/Procedure2_ImagingTimepoint",
                         "sensitive": false
                     },
                     "/Procedure2_OffsetUnit": {
@@ -11843,7 +11851,7 @@
                     "entity:CancerStage2 (ypT) ": "SELECT \t\"Patient_Identifier\" || '_CS2' as Identifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t'CancerStage2_Code' AS CancerStageCodeEUCAIM,\n\t\t\"CancerStage2_Value\" AS CancerStageValueEUCAIM,\n\t\t'0' AS Processed\nFROM FLOWFILE",
                     "entity:CancerStageT": "SELECT \t\"Patient_Identifier\" || '_CST' as Identifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t'CLIN1031297' AS CancerStageCodeEUCAIM,\n\t\t\"CancerStageT_Value\" AS CancerStageValueEUCAIM,\n\t\t'0' AS Processed\nFROM FLOWFILE",
                     "entity:Dataset": "SELECT \t\"Dataset_Identifier\" AS Identifier,\n\t\t\"Dataset_Title\" AS Title,\n\t\t\"Dataset_Description\" AS Description,\n\t\t'0' as Processed\nFROM FLOWFILE",
-                    "entity:MedicationAdministration": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"MedicationAdministration_Identifier\" AS TreatmentIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS primarycanceridentifier,\n\t\t'MedicationAdministration_Code' AS MedicationCode,\n\t\t\"MedicationAdministration_OffsetUnit\" AS OffsetUnitEUCAIM,\n\t\t'day' AS OffsetUnitOriginal,\n\t\t\"MedicationAdministration_OffsetFromDiagnosis\" AS OffsetFromDiagnosis,\n\t\t'0' AS Processed\nFROM FLOWFILE",
+                    "entity:MedicationAdministration": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"MedicationAdministration_Identifier\" AS TreatmentIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS primarycanceridentifier,\n\t\t\"Systemic therapy drug\" AS MedicationCodeOriginal,\n\t\t\"MedicationAdministration_Code\" AS MedicationCodeEUCAIM,\n\t\t\"MedicationAdministration_OffsetUnit\" AS OffsetUnitEUCAIM,\n\t\t'day' AS OffsetUnitOriginal,\n\t\t\"MedicationAdministration_OffsetFromDiagnosis\" AS OffsetFromDiagnosis,\n\t\t'0' AS Processed\nFROM FLOWFILE",
                     "entity:Patient": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS Identifier,\n\t\t\"Population\" AS\tDiagnosticCategoryOriginal,\n\t\t\"Patient_DiagnosticCategory\" AS DiagnosticCategoryEucaim,\n\t\t\"Patient sex\" AS BirthSexOriginal,\n        \"Patient_BirthSex\" AS BirthSexEucaim,\n\t\t\"Patient_ManagingOrganization\" AS ManagingOrganization,\n\t\tCASE\n        \tWHEN UPPER(TRIM(\"Patient_Deceased\")) = 'YES' THEN '1'\n        \tWHEN UPPER(TRIM(\"Patient_Deceased\")) = 'NO'  THEN '0'\n        ELSE NULL\n    \tEND AS deceased,\n\t\t'0' AS Processed\nFROM FLOWFILE\nWHERE UPPER(TRIM(COALESCE(\"Patient sex\", ''))) NOT IN ('', 'NA')\n   \t\tOR UPPER(TRIM(COALESCE(\"Population\",  ''))) NOT IN ('', 'NA')",
                     "entity:Procedure3 (PET-CT) ": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"Procedure3_Identifier\" AS ProcedureIdentifier,\n\t\t\"Procedure3_Code\" AS\timagingprocedureeucaim,\n        'Biopsy' AS imagingprocedureoriginal,\n\t\t\"Procedure3_OffsetUnit\" AS offsetuniteucaim,\n\t\t'day' AS offsetunitoriginal,\n\t\t\"Procedure3_OffsetFromDiagnosis\" AS offsetfromdiagnosis,\n\t\t\"Procedure3_ImagingTimepoint\" AS ImagingTimepoint,\n\t\t'0' AS Processed\nFROM FLOWFILE",
                     "entity:Tumor": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" || '_tumor_1' as Identifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS PrimaryCancerConditionIdentifier,\n\t\t\"Tumor location.BodySite.Code\" AS BodySiteOriginal,\n\t\t\"Tumor_BodySite_Code\" AS BodySiteEUCAIM,\n\t\t'day' AS OffsetUnitOriginal,\n\t\t\"Tumor location.BodySite.LocationQualifier\" AS BodySiteLocationQualifierOriginal,\n\t\t\"Tumor_BodySite_LocationQualifier\" AS BodySiteLocationQualifierEUCAIM,\n\t\t\"Tumor_BodySite_LateralityQualifier\" AS BodySiteLateralityQualifierEUCAIM,\n\t\t\"Tumor location.BodySite.LateralityQualifier\" AS BodySiteLateralityQualifierOriginal,\n\t\t\"Tumor_SizeDimensionUnit\" AS sizeDimensionUnit,\n\t\tCASE\n        \tWHEN \"Tumor_SizeMaximumDimension\" = '?' THEN NULL\n        ELSE \"Tumor_SizeMaximumDimension\"\n\t\tEND AS sizeMaximumDimension,\n\t\t'0' AS Processed\nFROM FLOWFILE",
