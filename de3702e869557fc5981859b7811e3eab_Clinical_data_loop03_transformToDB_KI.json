@@ -3716,7 +3716,7 @@
                     "Obtain Generated Keys": "false",
                     "putsql-sql-statement": "CALL eucaim_etl_aux.insert_log_v001(?,?,?,?,?,?,?,?,?);",
                     "rollback-on-failure": "false",
-                    "Support Fragmented Transactions": "true",
+                    "Support Fragmented Transactions": "false",
                     "Transaction Timeout": null
                 },
                 "propertyDescriptors": {
@@ -4757,7 +4757,7 @@
                     "Obtain Generated Keys": "false",
                     "putsql-sql-statement": "CALL eucaim_etl_aux.insert_log_v001(?,?,?,?,?,?,?,?,?);",
                     "rollback-on-failure": "false",
-                    "Support Fragmented Transactions": "true",
+                    "Support Fragmented Transactions": "false",
                     "Transaction Timeout": null
                 },
                 "propertyDescriptors": {
@@ -5227,7 +5227,7 @@
                 },
                 "properties": {
                     "/PrimaryCancerCondition_AssertedDate": "format(toDate(/\"original_data.a_diag_dat\", \"yyyy-MM-dd\"), \"yyyy-MM-dd\")",
-                    "/SurgicalProcedure_PerformedDate": "format(toDate(/original_data.op_kir_dat, \"yyyyMMdd\"), \"yyyy-MM-dd\")",
+                    "/SurgicalProcedure_PerformedDate": "format(toDate(/original_data.op_kir_dat, \"yyyy-MM-dd\"), \"yyyy-MM-dd\")",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
                     "Replacement Value Strategy": "record-path-value"
@@ -6497,7 +6497,7 @@
                     "Obtain Generated Keys": "false",
                     "putsql-sql-statement": "CALL eucaim_etl_aux.insert_log_v001(?,?,?,?,?,?,?,?,?);",
                     "rollback-on-failure": "false",
-                    "Support Fragmented Transactions": "true",
+                    "Support Fragmented Transactions": "false",
                     "Transaction Timeout": null
                 },
                 "propertyDescriptors": {
@@ -7138,7 +7138,7 @@
                     "dbf-default-precision": "10",
                     "dbf-default-scale": "0",
                     "entity: ImagingProcedure": "SELECT \t\"ImagingProcedure_Identifier\" AS ProcedureIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"ImagingProcedure_PrimaryCancerConditionIdentifier\" AS PrimaryCancerConditionIdentifier,\n\t\t1 AS ImagingTimepoint,\n\t\t'IMG1000030' AS ImagingProcedureEUCAIM,\n\t\t'Mammography' AS ImagingProcedureOriginal,\n\t\t'IMG1005453' AS ImagingProcedureCategoryCodeEUCAIM,\n\t\t'Imaging (Procedure)' AS ImagingProcedureCategoryCodeOriginal,\n\t\t'0' AS Processed\nFROM FLOWFILE",
-                    "entity: Primary Cancer Condition": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS Identifier,\n\t\tCAST(REPLACE(\"PrimaryCancerCondition_AgeAtDiagnosis\", ',', '.') AS DOUBLE) AS AgeOfDiagnosis,\n\t\t'Year' AS AgeUnitOriginal,\n\t\tCASE\n        \tWHEN \"PrimaryCancerCondition_HistologyMorphologyBehaviorInSitu\" IN ('10', '20', '40', '50')\n        \tTHEN \"PrimaryCancerCondition_HistologyMorphologyBehaviorInSitu\"\n        \tELSE \"PrimaryCancerCondition_HistologyMorphologyBehaviorInvasive\"\n    \tEND AS histologymorphologybehavioureucaim,\n\t\tCASE\n        \tWHEN \"PrimaryCancerCondition_HistologyMorphologyBehaviorInSitu\" IN ('10', '20', '40', '50')\n        \tTHEN \"original_data.op_pad_insitusnomed\"\n        \tELSE \"original_data.op_pad_invasivsnomed\"\n    \tEND AS histologymorphologybehaviouroriginal,\n\t\t\"PrimaryCancerCondition_AssertedDate\" AS AssertedDate,\n\t\t'0' AS Processed\nFROM FLOWFILE",
+                    "entity: Primary Cancer Condition": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"PrimaryCancerCondition_Identifier\" AS Identifier,\n\t\tCASE\n        \tWHEN TRIM(\"PrimaryCancerCondition_AgeAtDiagnosis\") SIMILAR TO '[0-9]+([.,][0-9]+)?'\n        \tTHEN CAST(REPLACE(TRIM(\"PrimaryCancerCondition_AgeAtDiagnosis\"), ',', '.') AS DOUBLE)\n    \tEND AS AgeOfDiagnosis,\n\t\t'Year' AS AgeUnitOriginal,\n\t\tCASE\n        \tWHEN \"PrimaryCancerCondition_HistologyMorphologyBehaviorInSitu\" IN ('10', '20', '40', '50')\n        \tTHEN \"PrimaryCancerCondition_HistologyMorphologyBehaviorInSitu\"\n        \tELSE \"PrimaryCancerCondition_HistologyMorphologyBehaviorInvasive\"\n    \tEND AS histologymorphologybehavioureucaim,\n\t\tCASE\n        \tWHEN \"PrimaryCancerCondition_HistologyMorphologyBehaviorInSitu\" IN ('10', '20', '40', '50')\n        \tTHEN \"original_data.op_pad_insitusnomed\"\n        \tELSE \"original_data.op_pad_invasivsnomed\"\n    \tEND AS histologymorphologybehaviouroriginal,\n\t\t\"PrimaryCancerCondition_AssertedDate\" AS AssertedDate,\n\t\t'0' AS Processed\nFROM FLOWFILE",
                     "entity: SurgicalProcedure ": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS PatientIdentifier,\n\t\t\"SurgicalProcedure_Identifier\" AS TreatmentIdentifier,\n\t\tCASE\n        \tWHEN \"SurgicalProcedure_CodeAxillary\" IN ('1', '2', '3', '4', '98')\n        \tTHEN \"SurgicalProcedure_CodeAxillary\"\n        \tELSE \"SurgicalProcedure_CodeBreast\"\n    \tEND AS procedureeucaim,\n\t\tCASE\n        \tWHEN \"SurgicalProcedure_CodeAxillary\" IN ('1', '2', '3', '4', '98')\n        \tTHEN \"original_data.op_kir_axill\"\n        \tELSE \"original_data.op_kir_brost\"\n    \tEND AS procedureoriginal,\n\t\t'0' AS Processed\nFROM FLOWFILE",
                     "entity:Dataset": "SELECT \t\"Dataset_Identifier\" AS Identifier,\n\t\t\"Dataset_Title\" AS Title,\n\t\t\"Dataset_Description\" AS Description,\n\t\t'0' as Processed\nFROM FLOWFILE",
                     "entity:Patient": "SELECT \t\"Dataset_Identifier\" AS DatasetIdentifier,\n\t\t\"Patient_Identifier\" AS Identifier,\n\t\t\"decision\" AS\tDiagnosticCategoryOriginal,\n\t\t\"Patient_DiagnosticCategory\" AS DiagnosticCategoryEucaim,\n\t\t\"dicom_tags.PatientSex.Value\" AS BirthSexOriginal,\n        \"Patient_BirthSex\" AS BirthSexEucaim,\n\t\t'0' AS Processed\nFROM FLOWFILE",

@@ -4421,7 +4421,7 @@
                     "Obtain Generated Keys": "false",
                     "putsql-sql-statement": "CALL eucaim_etl_aux.insert_log_v001(?,?,?,?,?,?,?,?,?);",
                     "rollback-on-failure": "false",
-                    "Support Fragmented Transactions": "true",
+                    "Support Fragmented Transactions": "false",
                     "Transaction Timeout": null
                 },
                 "propertyDescriptors": {
@@ -4805,7 +4805,7 @@
                     "Obtain Generated Keys": "false",
                     "putsql-sql-statement": "CALL eucaim_etl_aux.insert_log_v001(?,?,?,?,?,?,?,?,?);",
                     "rollback-on-failure": "false",
-                    "Support Fragmented Transactions": "true",
+                    "Support Fragmented Transactions": "false",
                     "Transaction Timeout": null
                 },
                 "propertyDescriptors": {
@@ -7988,7 +7988,7 @@
                     "Obtain Generated Keys": "false",
                     "putsql-sql-statement": "CALL eucaim_etl_aux.insert_log_v001(?,?,?,?,?,?,?,?,?);",
                     "rollback-on-failure": "false",
-                    "Support Fragmented Transactions": "true",
+                    "Support Fragmented Transactions": "false",
                     "Transaction Timeout": null
                 },
                 "propertyDescriptors": {
