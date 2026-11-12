@@ -4210,9 +4210,10 @@
                 "instanceIdentifier": "620c9027-c94d-355c-2b7f-cc8c6dc5c551",
                 "name": "DBConnectionPool",
                 "properties": {
-                    "Database Connection URL": "jdbc:postgresql://nifi-postgres:5432/eucaim-etl-db",
+                    "Database Connection URL": "jdbc:postgresql://#{SHARED_DB_HOST}:#{SHARED_DB_PORT}/#{SHARED_DB_NAME}",
                     "Database Driver Class Name": "org.postgresql.Driver",
-                    "Database User": "postgres",
+                    "Database User": "#{SHARED_DB_USERNAME}",
+                    "Password": "#{SHARED_DB_PASSWORD}",
                     "database-driver-locations": "#{db_driver_filepath}",
                     "dbcp-max-conn-lifetime": "-1",
                     "dbcp-max-idle-conns": "8",
@@ -12896,6 +12897,13 @@
                     "provided": false,
                     "sensitive": false,
                     "value": "${SHARED_DB_NAME}"
+                },
+                {
+                    "description": "",
+                    "name": "SHARED_DB_PORT",
+                    "provided": false,
+                    "sensitive": false,
+                    "value": "${SHARED_DB_PORT}"
                 }
             ]
         }

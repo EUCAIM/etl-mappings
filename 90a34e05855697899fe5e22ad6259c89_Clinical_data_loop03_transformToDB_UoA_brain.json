@@ -2871,9 +2871,10 @@
                 "instanceIdentifier": "f22234cd-f0da-3b1a-96fb-fc76449fb5ee",
                 "name": "DBConnectionPool",
                 "properties": {
-                    "Database Connection URL": "jdbc:postgresql://nifi-postgres:5432/eucaim-etl-db",
+                    "Database Connection URL": "jdbc:postgresql://#{SHARED_DB_HOST}:#{SHARED_DB_PORT}/#{SHARED_DB_NAME}",
                     "Database Driver Class Name": "org.postgresql.Driver",
-                    "Database User": "postgres",
+                    "Database User": "#{SHARED_DB_USERNAME}",
+                    "Password": "#{SHARED_DB_PASSWORD}",
                     "database-driver-locations": "#{db_driver_filepath}",
                     "dbcp-max-conn-lifetime": "-1",
                     "dbcp-max-idle-conns": "8",
@@ -10547,6 +10548,40 @@
                     "provided": false,
                     "sensitive": false,
                     "value": "${ETL_HOME}/TDC_Output"
+                },
+                {
+                    "description": "",
+                    "name": "SHARED_DB_HOST",
+                    "provided": false,
+                    "sensitive": false,
+                    "value": "${SHARED_DB_HOST}"
+                },
+                {
+                    "description": "",
+                    "name": "SHARED_DB_PORT",
+                    "provided": false,
+                    "sensitive": false,
+                    "value": "${SHARED_DB_PORT}"
+                },
+                {
+                    "description": "",
+                    "name": "SHARED_DB_NAME",
+                    "provided": false,
+                    "sensitive": false,
+                    "value": "${SHARED_DB_NAME}"
+                },
+                {
+                    "description": "",
+                    "name": "SHARED_DB_USERNAME",
+                    "provided": false,
+                    "sensitive": false,
+                    "value": "${SHARED_DB_USERNAME}"
+                },
+                {
+                    "description": "",
+                    "name": "SHARED_DB_PASSWORD",
+                    "provided": false,
+                    "sensitive": true
                 }
             ]
         }
