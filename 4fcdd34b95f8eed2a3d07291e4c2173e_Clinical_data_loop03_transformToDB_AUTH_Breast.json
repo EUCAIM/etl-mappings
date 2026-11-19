@@ -3756,7 +3756,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -4395,7 +4394,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -5042,7 +5040,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -5152,7 +5149,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -5898,7 +5894,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -6444,7 +6439,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -6706,7 +6700,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -6968,7 +6961,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -7411,21 +7403,21 @@
                     "y": -96.0
                 },
                 "properties": {
-                    "/Episode1_Identifier ": "concat(concat(concat(\"/Dataset_Identifier\", /\"Patient Number\"), '_cancerCondition_1'), 'episode_1')",
-                    "/ImagingProcedure1_CancerConditionIdentifier": "concat(concat(\"/Dataset_Identifier\", /\"Patient Number\"), '_cancerCondition_1')",
+                    "/Episode1_Identifier ": "concat(concat(concat(/\"Dataset_Identifier\", coalesce(/\"PatientID\", /\"Patient Number\")), '_cancerCondition_1'), 'episode_1')",
+                    "/ImagingProcedure1_CancerConditionIdentifier": "concat(concat(/\"Dataset_Identifier\", coalesce(/\"PatientID\", /\"Patient Number\")), '_cancerCondition_1')",
                     "/ImagingProcedure1_ProcedureCode ": "/\"Imaging procedure\"",
-                    "/ImagingProcedure1_ProcedureIdentifier": "concat(concat(concat(\"/Dataset_Identifier\", /\"Patient Number\"), '_cancerCondition_1'), 'imaging_1')",
+                    "/ImagingProcedure1_ProcedureIdentifier": "concat(concat(concat(/\"Dataset_Identifier\", coalesce(/\"PatientID\", /\"Patient Number\")), '_cancerCondition_1'), 'imaging_1')",
                     "/Patient_BirthSex": "/Gender",
                     "/Patient_DiagnosticCategory": "/Population",
-                    "/Patient_Identifier": "/\"Patient Number\"",
+                    "/Patient_Identifier": "coalesce(/\"PatientID\", /\"Patient Number\")",
                     "/PrimaryCancerCondition_AgeAtDiagnosis": "/\"Age at diagnosis\"",
                     "/PrimaryCancerCondition_BodySiteCode": "/\"Topography : Organ\"",
                     "/PrimaryCancerCondition_HistologyMorphologyBehaviourCode": "/Pathology",
-                    "/PrimaryCancerCondition_Identifier": "concat(concat(\"/Dataset_Identifier\", /\"Patient Number\"), '_cancerCondition_1')",
-                    "/PrimaryCancerCondition_PatientIdentifier": "/\"Patient Number\"",
+                    "/PrimaryCancerCondition_Identifier": "concat(concat(/\"Dataset_Identifier\", coalesce(/\"PatientID\", /\"Patient Number\")), '_cancerCondition_1')",
+                    "/PrimaryCancerCondition_PatientIdentifier": "coalesce(/\"PatientID\", /\"Patient Number\")",
                     "/Tumor_BodySiteCode": "/\"Topography : Organ\"",
-                    "/Tumor_CancerConditionIdentifier": "concat(concat(\"/Dataset_Identifier\", /\"Patient Number\"), '_cancerCondition_1')",
-                    "/Tumor_Identifier": "concat(concat(concat(\"/Dataset_Identifier\", /\"Patient Number\"), '_cancerCondition_1'), 'tumor_1')",
+                    "/Tumor_CancerConditionIdentifier": "concat(concat(/\"Dataset_Identifier\", coalesce(/\"PatientID\", /\"Patient Number\")), '_cancerCondition_1')",
+                    "/Tumor_Identifier": "concat(concat(concat(/\"Dataset_Identifier\", coalesce(/\"PatientID\", /\"Patient Number\")), '_cancerCondition_1'), 'tumor_1')",
                     "Record Reader": "92a4a0ba-9ed7-31b5-9448-444980c3d608",
                     "Record Writer": "17e7a1ff-9ba8-354b-9e9d-fa4cfbb4574d",
                     "Replacement Value Strategy": "record-path-value"
@@ -7818,7 +7810,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
@@ -8040,7 +8031,6 @@
                     }
                 },
                 "retriedRelationships": [
-                    "failure",
                     "retry"
                 ],
                 "retryCount": 10,
